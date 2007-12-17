@@ -14,7 +14,6 @@ Url:		http://refdb.sourceforge.net
 BuildRequires:  perl(Text::Iconv)
 Provides:	perl(RefDB)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-root
 
 %description
 Perlmod package for the MARC and Pubmed import filters.
