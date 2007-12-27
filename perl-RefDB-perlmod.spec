@@ -1,23 +1,23 @@
 %define module	RefDB-perlmod
 %define name	perl-%{module}
-%define version 0.4.1
-%define release %mkrel 4
+%define version 1.2
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	%{module} module for perl
-License:	GPL or Artistic
+License:	GPLv2+
 Group:		Development/Perl
-Source:		http://prdownloads.sourceforge.net/refdb/%{module}-%{version}.tar.bz2
-Url:		http://refdb.sourceforge.net
+Source:		http://prdownloads.sourceforge.net/refdb/%{module}-%{version}.tar.gz
+URL:		http://refdb.sourceforge.net
 BuildRequires:  perl(Text::Iconv)
 Provides:	perl(RefDB)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-root
 
 %description
-Perlmod package for the MARC and Pubmed import filters.
+Perl component for the MARC and Pubmed import filters.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -29,16 +29,16 @@ Perlmod package for the MARC and Pubmed import filters.
 %check
 %{__make} test
 
-%clean 
-rm -rf $RPM_BUILD_ROOT
-
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
+
+%clean 
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes version
+%doc Changes
 %{perl_vendorlib}/RefDB
 %{_mandir}/*/*
 
