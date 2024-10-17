@@ -7,7 +7,7 @@ Summary:	%{module} module for perl
 License:	GPLv2+
 Group:		Development/Perl
 Source:		http://prdownloads.sourceforge.net/refdb/%{module}-%{version}.tar.gz
-URL:		http://refdb.sourceforge.net
+URL:		https://refdb.sourceforge.net
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Text::Iconv)
