@@ -9,6 +9,7 @@ Group:		Development/Perl
 Source:		http://prdownloads.sourceforge.net/refdb/%{module}-%{version}.tar.gz
 URL:		https://refdb.sourceforge.net
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Text::Iconv)
 Provides:	perl(RefDB)
